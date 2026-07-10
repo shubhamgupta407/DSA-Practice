@@ -1,0 +1,20 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    set<int> s;
+
+    s.insert(1);
+    s.insert(6);
+    s.insert(31);
+
+    auto itr = s.end();
+
+    while (itr != s.begin()) {
+        --itr;
+        cout << *itr << " ";
+    }
+
+    return 0;
+}
