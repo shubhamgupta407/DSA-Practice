@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+class Tree {
+public:
+    int val;
+    Tree* left;
+    Tree* right;
+
+    Tree(int val) {
+        this->val = val;
+        left = NULL;
+        right = NULL;
+    }
+};
+
+int main() {
+
+    
+    Tree* root = new Tree(5);
+
+    Tree* c1 = new Tree(7);
+    Tree* c2 = new Tree(17);
+
+    root->left = c1;
+    root->right = c2;
+
+    Tree* d1 = new Tree(3);
+    Tree* d2 = new Tree(6);
+    Tree* d3 = new Tree(20);
+
+    c1->left = d1;
+    c1->right = d2;
+    c2->right = d3;
+
+    Tree* e1 = new Tree(13);
+    Tree* e2 = new Tree(15);
+    Tree* e3 = new Tree(25);
+    Tree* e4 = new Tree(30);
+
+    d1->left = e1;
+    d1->right = e2;
+
+    d3->left = e3;
+    d3->right = e4;
+
+    return 0;
+}
