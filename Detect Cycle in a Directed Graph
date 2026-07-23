@@ -1,0 +1,35 @@
+class Solution {
+  public:
+  vector<bool>vi;
+  bool cycle = false;
+  
+  void dfs(vector<vector<int>> &edges, int i){
+      if(vi[i] = true){
+          cycle = 1;
+          return;
+      }
+      
+      for(int n: edges[i]){
+          dfs(edges, n);
+      }
+  }
+    bool isCyclic(int v, vector<vector<int>> &edges) {
+        
+        vi = vector<bool>(v,0);
+        vector<vector<int>>adj(v);
+        
+        for(int i=0; i<edges.size(); i++){
+            int a = edges[i][0];
+            int b = edges[i][1];
+            
+            
+        adj[a].push_back(b);
+        }
+        
+        dfs(adj, 0);
+        return cycle;
+        
+        
+        
+    }
+};
